@@ -1,0 +1,187 @@
+/*Seção HERO (Apresentação Inicial)*/
+
+/* Define que a seção hero ocupa 100% da largura e no mínimo toda a altura da tela */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 20px; /* Espaço interno (topo/baixo e laterais) */
+
+  /* Deixa tudo alinhado no centro e organizado em coluna */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+/* Plano de fundo com a imagem de códigos coloridos*/
+.bg-code {
+  background-image: url('../assets/Background_Intro.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed; /* Efeito "parallax" no desktop */
+}
+
+/* Wrapper para juntar a foto de perfil e o ícone </> 
+Deixa os dois na mesma "área" para posicionar o ícone em cima da imagem*/
+.profile-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/*Foto de perfil redondinha, com borda vermelha e ajustada para não distorcer*/
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid var(--principal-red);
+  object-fit: cover;
+}
+
+/*Ícone de código posicionado sobre a foto no canto inferior direito 
+Ajuste o "right" se quiser mover mais para dentro ou fora da borda*/
+.code-pic {
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+  width: 32px;
+  height: 32px;
+}
+
+/*Organiza todos os elementos da apresentação (foto + textos)
+Espaçamento entre eles controlado pelo gap*/
+.hero-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/*Texto "Hello World! Meu nome é..."
+Estilo discreto para introduzir quem é você*/
+.hero-introduction {
+  font-size: 1rem;
+  color: var(--base-gray-400);
+  margin-top: 0; /* Não precisa espaço extra porque o gap já resolve */
+}
+
+/*Título principal: "Desenvolvedor Fullstack"
+Chamativo e com bastante destaque*/
+.hero-title {
+  font: var(--title-lg);
+  color: var(--base-gray-600);
+  margin-top: 8px; /* Deixa o título pertinho da introdução */
+}
+
+/*Coloca cor vermelha apenas no seu nome 
+Fica mais elegante destacar o nome assim*/
+.highlight {
+  color: var(--principal-red);
+}
+
+/*Texto de apoio embaixo do título 
+Explica rapidamente o que você faz*/
+.hero-description {
+  max-width: 600px;
+  margin-top: 24px;
+  font-size: 1rem;
+  opacity: 0.7; /* Um pouco mais transparente para dar leveza */
+  color: var(--base-gray-400);
+}
+
+/*Área onde ficam os ícones das tecnologias que você domina
+Flexbox organiza tudo lado a lado e quebra linha se precisar*/
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+/*Cada botão de tecnologia (GitHub, HTML, CSS etc)
+Formato oval, espaçamento interno e cor base escura*/
+.tech-icons a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--base-gray-300);
+  padding: 10px 16px;
+  border-radius: 50px; /* Oval bonitão */
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 400; /* Texto normal, sem bold exagerado */
+  color: white; /* Texto sempre branco */
+  transition: background 0.3s; /* Transição suave ao passar o mouse */
+}
+
+/*Configura o tamanho dos ícones dentro dos botões*/
+.tech-icons a img {
+  width: 24px;
+  height: 24px;
+}
+
+/*Efeito hover nos botões: clareia levemente o fundo
+Dá um feedback visual para o usuári*/
+.tech-icons a:hover {
+  background-color: var(--base-gray-400);
+}
+
+/*Seta animada que convida a rolar a página para baixo*/
+.scroll-down {
+  margin-top: 48px;
+}
+
+.scroll-down img {
+  width: 32px;
+  animation: bounce 2s infinite; /* Pulo infinito para chamar atenção */
+}
+
+/*Definindo o movimento da seta: sobe e desce suavemente*/
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/*Melhora a performance no celular: tira o efeito "fixo" do fundo
+Senão pode travar em alguns dispositivos*/
+@media (max-width: 768px) {
+  .bg-code {
+    background-attachment: scroll;
+  }
+}
+
+/*Ajuste de cores dos ícones*/
+/* GitHub - Branco invertido */
+.tech-icons a.github img {
+  filter: invert(1);
+}
+/* HTML - Tom de vermelho */
+.tech-icons a.html img {
+  filter: brightness(0) saturate(100%) invert(58%) sepia(11%) saturate(5376%) hue-rotate(337deg) brightness(88%) contrast(97%);
+}
+/* CSS - Azul tradicional */
+.tech-icons a.css img {
+  filter: brightness(0) saturate(100%) invert(32%) sepia(72%) saturate(660%) hue-rotate(183deg) brightness(90%) contrast(88%);
+}
+/* JavaScript - Amarelo vivo */
+.tech-icons a.javascript img {
+  filter: brightness(0) saturate(100%) invert(81%) sepia(45%) saturate(734%) hue-rotate(2deg) brightness(109%) contrast(97%);
+}
+/* React - Azul claro */
+.tech-icons a.react img {
+  filter: brightness(0) saturate(100%) invert(82%) sepia(12%) saturate(543%) hue-rotate(176deg) brightness(96%) contrast(87%);
+}
+/* Node.js - Verde folha */
+.tech-icons a.nodejs img {
+  filter: brightness(0) saturate(100%) invert(55%) sepia(36%) saturate(747%) hue-rotate(73deg) brightness(91%) contrast(86%);
+}

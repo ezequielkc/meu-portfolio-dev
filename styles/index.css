@@ -1,0 +1,9 @@
+/* Importação de outros arquivos CSS */
+/* Importa o global.css, onde ficam as configurações básicas do projeto:
+reset de margens, variáveis de cores, fontes, tamanhos de textos, etc.
+Assim, garantimos que todo o site siga um padrão.*/
+@import url(global.css);
+
+/* Importa o hero.css, que cuida apenas da seção inicial "Hero" do site.
+Esse arquivo deixa o CSS mais organizado, porque cada parte do site tem seu próprio arquivo de estilos.*/
+@import url(hero.css);
