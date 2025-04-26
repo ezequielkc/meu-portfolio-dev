@@ -1,57 +1,56 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <!-- UTF-8 é padrão para acentuação correta -->
+  <!-- Define o conjunto de caracteres como UTF-8 para suportar acentuação -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Deixa responsivo, adaptando ao tamanho da tela (muito importante para mobile!!!) -->
+  <!-- Faz o site ser responsivo em dispositivos móveis -->
 
   <title>Ezequiel Kowalski | Dev Fullstack</title>
-  <!-- Título que aparece na aba do navegador -->
+  <!-- Título da aba do navegador -->
 
-  <!-- Fontes externas do Google Fonts -->
+  <!-- Pré-conexão para acelerar o carregamento das fontes externas -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Essas duas linhas acima aceleram o carregamento das fontes -->
 
-  <!-- Importando as fontes do projeto -->
+  <!-- Importação das fontes utilizadas no projeto -->
   <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
 
-  <!-- Importando o arquivo principal de estilos do site -->
+  <!-- Link do arquivo principal de estilos do projeto -->
   <link rel="stylesheet" href="styles/index.css">
 </head>
 
 <body>
-  <!-- Seção principal de apresentação do site -->
+  <!-- Seção principal de apresentação do site (Hero) -->
   <section class="hero bg-code">
-    <!-- Container que agrupa a foto + o texto de introdução -->
+    <!-- Perfil com imagem e descrição -->
     <div class="hero-profile">
 
-      <!-- Juntei a imagem de perfil e o ícone de código -->
+      <!-- Wrapper para imagem de perfil e ícone de código -->
       <div class="profile-wrapper">
         <img src="./assets/profile.svg" alt="Foto Ezequiel Kowalski" class="profile-pic">
         <img src="./assets/code.svg" alt="Ícone de código" class="code-pic">
       </div>
 
-      <!-- Texto introdutório -->
+      <!-- Pequena introdução -->
       <p class="hero-introduction">
         Hello World! Meu nome é <span class="highlight">Ezequiel Kowalski</span> e sou
       </p>
 
-      <!-- Título principal -->
+      <!-- Título principal da seção Hero -->
       <h1 class="hero-title">Desenvolvedor Fullstack</h1>
 
-      <!-- Descrição abaixo do título -->
+      <!-- Descrição resumida dos serviços oferecidos -->
       <p class="hero-description">
         Transformo necessidades em aplicações reais, desenvolvendo sistemas através da tecnologia, 
         contribuindo com soluções funcionais e personalizadas.
       </p>
     </div>
 
-    <!-- Área dos ícones das tecnologias -->
+    <!-- Área dos ícones das tecnologias que você domina -->
     <div class="tech-icons">
       <a href="#" class="github"><img src="./assets/GitHub.svg" alt="GitHub"> <span>GitHub</span></a>
       <a href="#" class="html"><img src="./assets/HTML.svg" alt="HTML5"> <span>HTML</span></a>
@@ -61,13 +60,105 @@
       <a href="#" class="nodejs"><img src="./assets/Node.js.svg" alt="Node.js"> <span>Node.js</span></a>
     </div>
 
-    <!-- Ícone de seta animada só para não ficar tão estático -->
+    <!-- Ícone de seta para indicar que a página continua -->
     <div class="scroll-down">
       <img src="./assets/CaretDoubleDown.png" alt="Scroll Down">
     </div>
-  </section>
+  </section> <!-- Fecha a seção Hero -->
 
-  
+  <!-- Seção Meus Serviços -->
+  <section id="meus-servicos" class="meus-servicos">
+    <div class="container">
+      <!-- Título da seção -->
+      <h2><span>Meus</span> serviços</h2>
+      <p>Como posso ajudar o seu negócio</p>
+
+      <!-- Grid de serviços oferecidos -->
+      <div class="servicos-grid">
+        <!-- Card de serviço 1 -->
+        <div class="servico-card">
+          <div class="icone">
+            <img src="./assets/web-interfaces.svg" alt="Ícone de Websites e Aplicativos">
+          </div>
+          <h3>Websites e Aplicativos</h3>
+          <p>Desenvolvimento de interfaces</p>
+        </div>
+
+        <!-- Card de serviço 2 -->
+        <div class="servico-card">
+          <div class="icone">
+            <img src="./assets/api-bancos.svg" alt="Ícone de API e banco de dados">
+          </div>
+          <h3>API e banco de dados</h3>
+          <p>Criação de serviços do sistema</p>
+        </div>
+
+        <!-- Card de serviço 3 -->
+        <div class="servico-card">
+          <div class="icone">
+            <img src="./assets/devops.svg" alt="Ícone de DevOps">
+          </div>
+          <h3>DevOps</h3>
+          <p>Gestão e infraestrutura da aplicação</p>
+        </div>
+      </div> <!-- Fecha o grid de serviços -->
+    </div> <!-- Fecha o container -->
+  </section> <!-- Fecha a seção Meus Serviços -->
+
+  <!-- Seção Contato -->
+  <section id="contato" class="contato bg-code">
+    <div class="container">
+      <!-- Título e chamada para contato -->
+      <h2><span>Contato</span></h2>
+      <h3>Gostou do meu trabalho?</h3>
+      <p>Entre em contato ou acompanhe as minhas redes!</p>
+
+      <!-- Lista de links de contato -->
+      <div class="contato-links">
+        <!-- Link para o LinkedIn -->
+        <a href="https://www.linkedin.com/in/ezequielkc/" target="_blank" class="contato-link">
+          <div class="icone">
+            <img src="./assets/linkedin-vector.svg" alt="Linkedin">
+          </div>
+          Linkedin
+          <img src="./assets/arrow.svg" alt="Seta" class="arrow-icon">
+        </a>
+
+        <!-- Link para o Instagram -->
+        <a href="https://www.instagram.com/ezequielkowalski/" target="_blank" class="contato-link">
+          <div class="icone">
+            <img src="./assets/instagram-vector.svg" alt="Instagram">
+          </div>
+          Instagram
+          <img src="./assets/arrow.svg" alt="Seta" class="arrow-icon">
+        </a>
+
+        <!-- Link para o GitHub -->
+        <a href="https://github.com/ezequielkc" target="_blank" class="contato-link">
+          <div class="icone">
+            <img src="./assets/github-vector.svg" alt="GitHub">
+          </div>
+          GitHub
+          <img src="./assets/arrow.svg" alt="Seta" class="arrow-icon">
+        </a>
+
+        <!-- Link para envio de E-mail -->
+        <a href="mailto:kcezequiel@gmail.com" target="_blank" class="contato-link">
+          <div class="icone">
+            <img src="./assets/email-vector.svg" alt="Email">
+          </div>
+          E-mail
+          <img src="./assets/arrow.svg" alt="Seta" class="arrow-icon">
+        </a>
+      </div> <!-- Fecha os links de contato -->
+    </div> <!-- Fecha o container -->
+  </section> <!-- Fecha a seção Contato -->
+
 </body>
+
+<!-- Rodapé simples com assinatura -->
+<footer>
+  <p>By Ezequiel Kowalski</p>
+</footer>
 
 </html>

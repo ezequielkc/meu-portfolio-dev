@@ -1,0 +1,78 @@
+/* Seção Meus Serviços */
+
+.meus-servicos {
+  padding: 80px 20px; /* Espaçamento interno da seção */
+  background-color: #111; /* Fundo escuro igual ao restante do site */
+  text-align: center; /* Centraliza os textos dentro da seção */
+  padding-top: 100px; /* Espaço extra no topo */
+  padding-bottom: 100px; /* Espaço extra embaixo */
+}
+
+/* Estilização do título "Meus serviços" */
+.meus-servicos h2 {
+  font-size: 2.5rem; /* Tamanho grande para o título */
+  margin-bottom: 10px; /* Espaçamento abaixo do título */
+  margin-bottom: 0; /* (atenção: você colocou dois margin-bottom! Este último é o que vale, ou seja, sem espaço abaixo do h2) */
+}
+
+/* Destaque colorido na palavra "Meus" */
+.meus-servicos h2 span {
+  color: #e63946; /* Cor vermelha para chamar atenção */
+}
+
+/* Estilização do parágrafo de descrição */
+.meus-servicos p {
+  font-size: 1.2rem; /* Fonte maior para melhor leitura */
+  margin-bottom: 50px; /* Espaço abaixo do parágrafo */
+  color: #ccc; /* Cor cinza clara para manter contraste */
+}
+
+/* Área dos Cards de Serviços */
+
+.servicos-grid {
+  display: grid; /* Ativa o modo grid */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  /* Cria colunas automáticas que se adaptam ao tamanho da tela */
+  gap: 30px; /* Espaçamento entre os cards */
+  justify-items: center; /* Centraliza os cards horizontalmente */
+  align-items: start; /* Alinha os cards ao topo do grid */
+}
+
+/* Estilização de cada card individual de serviço */
+.servico-card {
+  background-color: transparent; /* Sem fundo para visual mais limpo */
+  border: 1px solid #333; /* Borda discreta */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 30px 20px; /* Espaço interno dentro dos cards */
+  width: 100%; /* Ocupa toda a largura disponível */
+  max-width: 350px; /* Limita a largura máxima para manter padrão */
+  transition: transform 0.3s, border-color 0.3s; 
+  /* Animação suave ao passar o mouse */
+}
+
+/* Animação de hover no card */
+.servico-card:hover {
+  transform: translateY(-10px); /* Eleva o card para dar efeito de destaque */
+  border-color: #e63946; /* Altera a cor da borda para vermelho no hover */
+}
+
+/* Conteúdo dentro dos cards */
+
+/* Ícone representativo de cada serviço */
+.servico-card .icone img {
+  width: 50px; /* Largura do ícone */
+  height: 50px; /* Altura do ícone */
+  margin-bottom: 20px; /* Espaço abaixo do ícone */
+}
+
+/* Título de cada serviço (ex: Websites e Aplicativos) */
+.servico-card h3 {
+  margin-bottom: 10px; /* Espaço abaixo do título */
+  font-size: 1.5rem; /* Tamanho da fonte do título */
+}
+
+/* Pequena descrição de cada serviço */
+.servico-card p {
+  font-size: 1rem; /* Tamanho da fonte da descrição */
+  color: #aaa; /* Cor cinza médio para o texto descritivo */
+}

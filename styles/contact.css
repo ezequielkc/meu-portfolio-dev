@@ -1,0 +1,85 @@
+/* Seção Contato */
+.contato {
+  padding: 80px 20px; /* Espaçamento interno */
+  background-color: #111; /* Fundo escuro para manter o padrão do site */
+  text-align: center; /* Centraliza todos os textos */
+}
+
+/* Título da seção */
+.contato h2 {
+  font-size: 2rem;
+  color: #a78bfa; /* Roxo claro para destacar "Contato" */
+  margin-bottom: 10px;
+}
+
+/* Subtítulo (chamada para ação) */
+.contato h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Texto de apoio */
+.contato p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 40px;
+  
+}
+
+/* Container dos links de contato */
+.contato-links {
+  display: flex;
+  flex-direction: column; /* Empilha os links verticalmente */
+  gap: 20px; /* Espaço entre os botões */
+  align-items: center; /* Centraliza os botões no meio */
+}
+
+/* Estilo de cada botão de contato */
+.contato-link {
+  background-color: #1f1f1f; /* Fundo escuro um pouco mais claro */
+  color: #ccc; /* Cor do texto */
+  text-decoration: none; /* Remove sublinhado */
+  padding: 15px 20px;
+  border-radius: 8px; /* Cantos arredondados */
+  border: 1px solid #333; /* <<< Adiciona borda para harmonizar com Serviços */
+  width: 100%; /* O botão ocupa toda a largura do container */
+  max-width: 500px; /* Mas limita para não ficar gigante */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ícone - Texto - Seta bem espaçados */
+  transition: background-color 0.3s, transform 0.3s, border-color 0.3s; /* Animações suaves */
+}
+
+/* Animação ao passar o mouse */
+.contato-link:hover {
+  background-color: #292929; /* Escurece o botão */
+  border-color: #e63946; /* Borda muda para vermelho no hover */
+  transform: translateY(-5px); /* Sobe levemente */
+}
+
+/* Ícone inicial do botão */
+.contato-link .icone img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px; /* Espaço entre o ícone e o texto */
+}
+
+/* Ícone da setinha */
+.arrow-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 500px) {
+  .contato-link {
+    width: 100%; /* Em telas pequenas, botão ocupa 100% da largura */
+  }
+}
+
+footer{
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}

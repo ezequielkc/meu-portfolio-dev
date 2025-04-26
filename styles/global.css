@@ -1,89 +1,79 @@
-/* RESET GLOBAL: começando do zero no navegador.
-Por padrão, os navegadores aplicam margens e preenchimentos que podem bagunçar nosso layout.
-Aqui nós "resetamos" isso, deixando todos os elementos começando igual.
-O box-sizing border-box faz com que padding e border sejam incluídos no tamanho dos elementos, 
-evitando surpresas no layout. */
+/* Reset Global: removendo margens e paddings padrão dos navegadores */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Remove margens externas */
+  padding: 0; /* Remove espaçamentos internos */
+  box-sizing: border-box; /* Faz largura e altura incluir padding e border (mais controle no layout) */
 }
 
-/* :root — Criando "variáveis globais" de CSS.
-O :root é como se fosse a raiz da página HTML (<html>).
-Tudo que definimos dentro dele pode ser "puxado" (referenciado) em qualquer lugar do CSS.
-
-Aqui vamos definir cores, fontes e tamanhos como variáveis, para manter o projeto padronizado 
-e facilitar ajustes no futuro. 
-(Se mudar uma variável, muda em todos os lugares que usam ela!) */
+/* Definição de variáveis globais no :root (acessíveis de qualquer parte do CSS) */
 :root {
-  /*   Paleta de cores principais do projeto
-  (Essas cores serão usadas em botões, títulos, detalhes importantes)  */
+  /* Paleta principal de cores */
   --principal-red: #E3646E;   
   --principal-purple: #BB72E9; 
   --principal-blue: #3996DB;   
-  --principal-green: #82BC4F;  
+  --principal-green: #82BC4F; 
   --principal-yellow: #EABD5F; 
 
-  /*   Tons de cinza (úteis para fundos, textos, bordas...)  */
-  --base-gray-100: #0D0E11; /* Fundo principal: bem escuro */
+  /* Tons de cinza usados no projeto */
+  --base-gray-100: #0D0E11; /* Fundo principal bem escuro */
   --base-gray-200: #16181D;
   --base-gray-300: #292C34;
-  --base-gray-400: #878EA1; /* Para textos menos importantes */
+  --base-gray-400: #878EA1; /* Cor para textos secundários */
   --base-gray-500: #C0C4CE;
-  --base-gray-600: #E2E4E9; /* Cor de textos principais */
+  --base-gray-600: #E2E4E9; /* Cor para textos principais */
 
-  /*   Fontes usadas no projeto (importadas via Google Fonts)  */
-  --font-asap: "Asap", sans-serif;             /* Títulos grandes */
-  --font-inconsolata: "Inconsolata", monospace; /* Códigos ou subtítulos especiais */
-  --font-maven: "Maven Pro", sans-serif;        /* Fonte principal para textos corridos */
+  /* Fontes do projeto (importadas do Google Fonts) */
+  --font-asap: "Asap", sans-serif; /* Fonte para títulos */
+  --font-inconsolata: "Inconsolata", monospace; /* Fonte para códigos e destaques */
+  --font-maven: "Maven Pro", sans-serif; /* Fonte principal dos textos corridos */
 
-  /*Estilos combinados de título (peso, tamanho e espaçamento entre linhas)*/
-  --title-lg: 700 56px/120% var(--font-asap); /* Grande: usado na home, por exemplo */
-  --title-md: 700 24px/120% var(--font-asap); /* Médio: usado em seções */
-  --title-sm: 700 16px/120% var(--font-asap); /* Pequeno: usado em cards ou subtítulos */
+  /* Estilos combinados para títulos (peso, tamanho, linha) */
+  --title-lg: 700 56px/120% var(--font-asap); /* Título grande, usado na Home */
+  --title-md: 700 24px/120% var(--font-asap); /* Título médio, usado em seções internas */
+  --title-sm: 700 16px/120% var(--font-asap); /* Título pequeno, usado em cards ou subtítulos */
 
-  /* Estilo para subtítulos especiais */
+  /* Estilo para subtítulos */
   --subtitle: 400 20px/120% var(--font-inconsolata);
 
-  /* Estilos para textos normais */
-  --text-md: 400 16px/140% var(--font-maven);
-  --text-sm: 400 14px/140% var(--font-maven);
+  /* Estilos para textos corridos */
+  --text-md: 400 16px/140% var(--font-maven); /* Texto médio */
+  --text-sm: 400 14px/140% var(--font-maven); /* Texto pequeno */
 }
 
-/*Estilos básicos aplicados diretamente no <body>
-*O <body> é o "corpo" da página, onde todo o conteúdo aparece.
-Aqui já definimos o fundo escuro, a cor padrão dos textos
-e a fonte principal usada em todo o site (caso não seja sobrescrita depois).*/
+/* Estilos básicos aplicados diretamente no body da página */
 body {
-  background-color: var(--base-gray-100); /* Fundo escuro, visual moderno */
-  color: var(--base-gray-600);             /* Texto em cinza bem claro */
-  font-family: var(--font-maven);           /* Fonte moderna e fácil de ler */
+  background-color: var(--base-gray-100); /* Fundo geral do site em cinza bem escuro */
+  color: var(--base-gray-600); /* Cor padrão dos textos (cinza claro) */
+  font-family: var(--font-maven); /* Fonte principal para textos */
 }
 
-/*Resumindo, o CSS e HTML se conectam basicamente dessa forma:
+/* Explicação sobre como usamos classes, IDs e variáveis no projeto:
+
 Classes ( .nomeDaClasse )
-- São usadas para estilizar vários elementos de forma parecida.
-- Definimos no HTML usando class="nomeDaClasse"
-- No CSS chamamos usando .nomeDaClasse
+- Usadas para estilizar vários elementos que compartilham o mesmo visual.
+- Declaradas no HTML como class="nomeDaClasse".
+- Chamadas no CSS usando .nomeDaClasse.
 
 Exemplo:
 HTML: <div class="hero"></div>
 CSS:  .hero { background-color: red; }
 
 IDs ( #nomeDoID )
-- São únicos! Cada página deve ter um ID diferente para cada elemento.
-- Definimos no HTML usando id="nomeDoID"
-- No CSS chamamos usando #nomeDoID
+- Cada ID é único em uma página.
+- Declarado no HTML como id="nomeDoID".
+- Chamado no CSS usando #nomeDoID.
 
 Exemplo:
 HTML: <section id="sobre"></section>
 CSS:  #sobre { padding: 60px; }
 
-Variáveis ( var(--nome-da-variavel) )
-- Usamos para deixar o projeto padronizado.
-- Chamamos qualquer valor definido no :root
+Variáveis CSS ( var(--nome-da-variavel) )
+- Usadas para manter o padrão e facilitar alterações globais.
+- Chamadas no CSS sempre com var(--nome).
 
 Exemplo:
 CSS: background-color: var(--base-gray-100);
-Ou seja: HTML + CSS + variáveis juntos = site organizado, bonito e fácil de manter!*/
+
+Resumo:
+HTML + CSS + Variáveis juntos = um site organizado, bonito e fácil de manter!
+*/
