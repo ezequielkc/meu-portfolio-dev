@@ -30,7 +30,7 @@ Aqui, a prioridade é mostrar **boas práticas de organização** e criar uma ba
 ## Boas práticas aplicadas
 
 - **HTML Semântico**: Uso correto de `<section>`, `<header>`, `<footer>`, `<main>`;
-- **CSS Modularizado**: Estilos separados por arquivos específicos (hero.css, services.css, contact.css);
+- **CSS Modularizado**: Estilos separados por arquivos específicos (`hero.css`, `services.css`, `contact.css`);
 - **Variáveis no CSS**: Definições de cores, fontes e tamanhos para manter padrão e facilitar manutenção;
 - **Organização de Classes e IDs**: Estrutura clara e padronizada para facilitar manutenção;
 - **Comentários didáticos**: Todos os arquivos estão documentados explicando cada parte do código;
@@ -60,7 +60,6 @@ Deixei o código **totalmente comentado** porque tive muita dificuldade de enten
 - Criar um **modo dark/light** para alternar o visual;
 - Melhorar a **acessibilidade** (foco no uso via teclado, leitores de tela, etc.);
 - Implementar **animações suaves** entre seções.
-
 
 ## Contribuições
 
